@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def improve_text(raw_text):
-    llm = OpenAI(temperature=0.2)
+    llm = OpenAI(temperature=0)
 
     prompt_template_name = PromptTemplate(
         input_variables=['raw_text'],
