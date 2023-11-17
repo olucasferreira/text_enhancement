@@ -12,7 +12,7 @@ def improve_text(raw_text):
 
     prompt_template_name = PromptTemplate(
         input_variables=['raw_text'],
-        template="Please enhance the following text, making it clearer and more fluent without making it overly formal: {raw_text}"
+        template= `"Please enhance the following text, making it clearer and more fluent without making it overly formal and keeping the text in the original language. Don't join the text, keep the same spacing and Don't replace the names of people envolved: {raw_text} "`
     )
 
     name_chain = LLMChain(llm=llm, prompt=prompt_template_name, output_key="raw_text")
