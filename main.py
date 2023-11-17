@@ -1,7 +1,7 @@
 import langchain_helper as lch
 import streamlit as st
 
-st.title("COMMUNICAITOR - Text Enhancement Playground")
+st.title("COMMUNICAITOR - Text Enhancement")
 
 raw_text = st.text_area("Enter your text here:", max_chars=3000)
 
