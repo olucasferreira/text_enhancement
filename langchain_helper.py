@@ -12,7 +12,7 @@ def improve_text(raw_text):
 
     prompt_template_name = PromptTemplate(
         input_variables=['raw_text'],
-        template= "Improve the following text for grammar and structure without generating additional content. Only refine the provided text. Original text: {raw_text}"
+        template= "Act like Grammarly, enhancing the following text for clarity and fluency while preserving the original language and structure. If the text is too short, focus solely on improving the existing content without generating additional information or altering the language. Ensure that the improved text aligns with the original context. Original text: {raw_text}"
     )
 
     name_chain = LLMChain(llm=llm, prompt=prompt_template_name, output_key="raw_text")
