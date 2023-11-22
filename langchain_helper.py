@@ -1,4 +1,4 @@
-from langchain.llms import OpenAI
+from langchain.llms import OpenAI, ChatOpenAI
 from langchain.llms import HuggingFaceHub
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def improve_text(raw_text):
-    llm = OpenAI(model_name="gpt-3.5-turbo-1106", temperature=0)
+    llm = ChatOpenAI(model_name="gpt-3.5-turbo-1106", temperature=0.1)
 
     prompt_template_name = PromptTemplate(
         input_variables=['raw_text'],
